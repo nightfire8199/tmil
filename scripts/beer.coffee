@@ -12,6 +12,6 @@ beer = (msg, query) ->
       ba.beerPage firstBeer.beer_url, (beer) ->
         theBeer = JSON.parse(beer)[0]
         theUrl = 'http://beeradvocate.com' + firstBeer.beer_url
-        msg.send "#{theBeer.brewery_name}\n#{theBeer.beer_name}\nRating: #{theBeer.ba_score} (#{theBeer.ba_rating})\n#{theUrl}"
+        msg.send "#{theBeer.brewery_name}\n_#{theBeer.beer_name}_\nRating: *#{theBeer.ba_score}* (#{theBeer.ba_rating})\n#{theUrl}"
     else
       msg.send "I couldn't find that one"

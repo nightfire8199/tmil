@@ -14,9 +14,7 @@ beer = (msg, query) ->
         theUrl = 'http://beeradvocate.com' + firstBeer.beer_url
         msg.send "#{theBeer.brewery_name}\n
           #{theBeer.beer_name}\n
-          Style: #{theBeer.beer_style}\n
-          ABV: #{theBeer.beer_abv}\n
-          Rating: #{theBeer.ba_score}\n
+          Rating: #{theBeer.ba_score} (#{theBeer.ba_rating})\n
           #{theUrl}"
     else
       msg.send "I couldn't find that one"
